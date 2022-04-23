@@ -3,7 +3,6 @@ import { NetworkConfig, WalletProvider } from '@raidguild/quiver'
 import WalletConnectProvider from '@walletconnect/web3-provider'
 import type { AppProps } from 'next/app'
 import React from 'react'
-import toast, { Toaster } from 'react-hot-toast'
 import { SWRConfig } from 'swr'
 import { IProviderOptions } from 'web3modal'
 
@@ -70,12 +69,6 @@ const DEFAULT_CHAIN_ID = '0x539' // Used to switch to if the user is on an unsup
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.StrictMode>
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          duration: 3000,
-        }}
-      />
       <WalletProvider
         web3modalOptions={web3modalOptions}
         networks={SUPPORTED_NETWORKS}
@@ -84,7 +77,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         // Optional but useful to handle events.
         handleModalEvents={(eventName, error) => {
           if (error) {
-            toast.error(error.message)
+            console.error(error.message)
           }
 
           console.log(eventName)
