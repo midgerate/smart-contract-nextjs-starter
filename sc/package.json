@@ -1,0 +1,52 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext=jsx,ts,tsx ./",
+    "lint:fix": "eslint --ext=jsx,ts,tsx ./ --fix",
+    "unused": "ts-unused-exports ./tsconfig.json",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat run node",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "verify": "hardhat run scripts/verify.ts --network localhost"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.1",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@typechain/hardhat": "^2.1.1",
+    "@types/chai": "^4.2.19",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/lodash": "^4.14.173",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.0.1",
+    "eslint-config-universe": "^7.0.1",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.4.1",
+    "husky": "^7.0.2",
+    "lodash": "^4.17.21",
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.13",
+    "pretty-quick": "^3.1.1",
+    "ts-node": "^10.0.0",
+    "ts-unused-exports": "^7.0.3",
+    "typechain": "^5.1.1",
+    "typescript": "^4.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  }
+}
