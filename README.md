@@ -1,4 +1,4 @@
-# CRA Started with Smart Contract development.
+# Next.js with Smart Contract development.
 
 Includes a working demo of client and smart contract integrated together. Clean with no additional dependencies other than developer tools.
 
