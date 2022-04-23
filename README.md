@@ -4,7 +4,7 @@ Includes a working demo of client and smart contract integrated together. Clean 
 
 ## Client
 
-- Create React App
+- Next.js
 - Web3 - Quiver (https://www.npmjs.com/package/@raidguild/quiver)
 - DX - Typescript, eslint, prettier
 
@@ -21,7 +21,7 @@ Includes a working demo of client and smart contract integrated together. Clean 
 1. Clone the repo
 2. In both sc and client folders install deps (yarn install)
 3. In the sc directory -
-   - Run a hardhat node `yarn node`
+   - Run a hardhat node `yarn hardhat`
    - Deploy to hardhat network `yarn deploy`
    - Copy the address from console.
 4. In the client folder

@@ -9,9 +9,7 @@ export const Home: FC<React.PropsWithChildren<unknown>> = () => {
     '0x5FbDB2315678afecb367f032d93F642f64180aa3',
     Inbox__factory
   )
-  const { response: message } = useReadContract(contract, 'message', [], {
-    autoUpdateInterval: 1000,
-  })
+  const { response: message } = useReadContract(contract, 'message', [])
   return (
     <>
       <ConnectWallet />

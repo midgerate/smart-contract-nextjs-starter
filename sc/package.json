@@ -8,7 +8,7 @@
     "unused": "ts-unused-exports ./tsconfig.json",
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "node": "hardhat run node",
+    "hardhat": "hardhat node",
     "deploy": "hardhat run scripts/deploy.ts --network localhost",
     "verify": "hardhat run scripts/verify.ts --network localhost"
   },
