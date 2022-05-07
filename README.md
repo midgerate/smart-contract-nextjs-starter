@@ -21,6 +21,7 @@ Includes a working demo of client and smart contract integrated together. Clean 
 1. Clone the repo
 2. In both sc and client folders install deps (yarn install)
 3. In the sc directory -
+   - Create a new file .env and copy the contents of .env.example
    - Run a hardhat node `yarn hardhat`
    - Deploy to hardhat network `yarn deploy`
    - Copy the address from console.

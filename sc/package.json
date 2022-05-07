@@ -48,5 +48,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged && npm run lint"
     }
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
   }
 }
